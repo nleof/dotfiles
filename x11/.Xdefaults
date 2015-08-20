@@ -1,0 +1,85 @@
+!!
+!! font
+!!
+
+!*font: xft:Bitstream Vera Sans Mono:size=8
+!*font:xft:Source Code Pro:Medium:size=11
+!*font: xft:Terminus:size=8
+!*font: xft:Tewi:size=8
+!*font: xft:Dina:size=8
+
+Xft.autohint:  true
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hintstyle: hintfull
+Xft.hinting:   true
+Xft.antialias: true
+Xft.dpi:       96
+!xdpyinfo | grep dots
+Xft.rgba:      rgb
+
+
+!!
+!! xterm
+!!
+!xterm*faceName:           xft:Source Code Pro:style=Medium:size=9
+!xterm*faceName:           xft:Bitstream Vera Sans Mono:size=8
+xterm*faceName:           xft:Tewi:size=8
+xterm*font:               fixed
+xterm*boldFont:           fixed
+xterm*boldMode:           false
+xterm*allowBoldFonts:     false
+xterm*showBlinkAsBold:    true
+xterm*dynamicColors:      true
+xterm*utf8:               2
+xterm*locale:             true
+xterm*eightBitInput:      true
+xterm*saveLines:          512
+xterm*scrollTtyOutput:    false
+xterm*scrollBar:          false
+xterm*jumpScroll:         true
+xterm*multiScroll:        true
+xterm*fastScroll:         true
+xterm*toolBar:            false
+xterm*termName:           xterm-256color
+xterm*borderWidth:        0
+xterm*metaSendsEscape:    true
+xterm*highlightSelection: true
+xterm*scrollKey:          true
+xterm*sessionMgt:         false
+xterm*cursorBlink:        true
+!! Select url, alt+click => firefox
+xterm*charClass:          33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+*VT100*translations:      #override Meta <Btn1Up>: exec-formatted("firefox '%t'", PRIMARY)
+
+!!
+!! colors
+!!
+
+! glade
+*foreground:   #ffffff
+*background:   #222222
+! black
+*color0:       #101010
+*color8:       #404040
+! red
+*color1:       #E84F4F
+*color9:       #D23D3D
+! green
+*color2:       #B8D68C
+*color10:      #A0CF5D
+! yellow
+*color3:       #E1AA5D
+*color11:      #F39D21
+! blue
+*color4:       #7DC1CF
+*color12:      #4E9FB1
+! magenta
+*color5:       #9B64FB
+*color13:      #8542FF
+! cyan
+*color6:       #6D878D
+*color14:      #42717B
+! white
+*color7:       #dddddd
+*color15:      #dddddd
