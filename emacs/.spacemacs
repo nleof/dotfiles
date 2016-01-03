@@ -28,15 +28,13 @@ values."
      osx
      emacs-lisp
      git
-     markdown
-     erc
-     ;; org
-     (shell :variables
-            shell-default-height 30
-            shell-default-position 'bottom)
+
      spell-checking
      syntax-checking
-     ;; version-control
+     latex
+     markdown
+     org-mode
+
      html
      clojure
      python
@@ -95,11 +93,11 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Hack"
+   dotspacemacs-default-font '("Bitstream Vera Sans Mono"
                                :size 13
                                :weight normal
                                :width normal
-                               :powerline-scale 1.1)
+                               :powerline-scale 1)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The leader key accessible in `emacs state' and `insert state'
