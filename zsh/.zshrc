@@ -19,6 +19,8 @@ export GOPATH=$HOME/dev/go
 export GOBIN=$GOPATH/bin
 export GOSRC=$GOPATH/src
 
-export PATH=$PATH:~/bin:$GOBIN
+export NPMBIN=$HOME/.npm-global/bin
+
+export PATH=$PATH:~/bin:$GOBIN:$NPMBIN
 
 REPORTTIME=5
