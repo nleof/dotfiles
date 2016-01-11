@@ -155,7 +155,7 @@ bar {
 client.background #222222
 
 # bindsym $mod+Shift+Return exec urxvt -e sh -c "ssh aleroux@213.186.33.101 -t -- aleroux@aleroux.sdev"
-bindsym $mod+Shift+Return exec xterm -e sh -c "ssh bled"
+# bindsym $mod+Shift+Return exec xterm -e sh -c "ssh bled"
 bindsym Ctrl+$alt+Up exec amixer set Master 2dB+
 bindsym Ctrl+$alt+Down exec amixer set Master 2dB-
 bindsym Ctrl+$alt+Space exec amixer set Master toggle
@@ -163,3 +163,11 @@ bindsym Ctrl+$alt+l exec i3lock -c 333333
 
 bindsym Ctrl+$alt+Left workspace prev
 bindsym Ctrl+$alt+Right workspace next
+
+exec --no-startup-id i3-msg 'workspace "1: dev"; exec xterm'
+exec --no-startup-id i3-msg 'workspace "1: dev"; exec xterm'
+exec --no-startup-id i3-msg 'workspace "2: dev"; exec emacs'
+exec --no-startup-id i3-msg 'workspace "4: web"; exec firefox'
+exec --no-startup-id i3-msg 'workspace "5: mail"; exec claws-mail'
+exec --no-startup-id i3-msg 'workspace "1: dev"'
+
