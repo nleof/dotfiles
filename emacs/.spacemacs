@@ -28,17 +28,25 @@ values."
      osx
      emacs-lisp
      git
+     version-control
+     shell
 
      spell-checking
      syntax-checking
      latex
      markdown
-     org-mode
+     finance
+     graphviz
 
      html
      clojure
      python
      go
+     rust
+     yaml
+     javascript
+     ansible
+     sql
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -203,7 +211,31 @@ user code."
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
   (setq powerline-default-separator 'nil)
+  (spaceline-compile)
+
+  (setq gofmt-command "goimports")
+
+  (setq-default git-magit-status-fullscreen t)
+
+  '(version-control :variables
+                    version-control-diff-tool 'diff-hl)
+  '(version-control :variables
+                    version-control-global-margin t)
+
+  ;; (setq python-shell-interpreter "python")
+  (setq anaconda-mode-server-script "/usr/local/lib/python2.7/site-packages/anaconda_mode.py")
+
+  (setq-default rust-enable-racer t)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(blink-cursor-mode nil)
+ '(column-number-mode t)
+ '(show-paren-mode t)
+ '(tool-bar-mode nil))
