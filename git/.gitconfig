@@ -1,6 +1,7 @@
 [user]
     name = Alexandre Leroux
     email = alexandre@yawp.fr
+    signinkey = BB0240EFF1082BCA
 
 [branch]
     autosetupmerge = true
@@ -45,5 +46,12 @@
 
 [push]
     default = simple
+
 [core]
     excludesfile = ~/.gitignore_global
+
+[url "ssh://git@github.com/ulule"]
+    insteadOf = https://github.com/ulule
+
+[commit]
+    gpgsign = true
