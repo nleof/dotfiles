@@ -29,14 +29,11 @@ values."
      emacs-lisp
      git
      version-control
-     shell
 
      spell-checking
      syntax-checking
      latex
      markdown
-     finance
-     graphviz
 
      html
      clojure
@@ -44,9 +41,9 @@ values."
      go
      rust
      yaml
-     javascript
      ansible
      sql
+     haskell
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -90,19 +87,24 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(solarized-light
+   dotspacemacs-themes '(monokai
                          spacemacs-dark
-                         spacemacs-light
                          solarized-dark
+                         solarized-light
+                         spacemacs-light
                          leuven
-                         monokai
                          zenburn)
    ;; If non nil the cursor color matches the state color.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Bitstream Vera Sans Mono"
-                               :size 13
+   ;; dotspacemacs-default-font '("Bitstream Vera Sans Mono"
+   ;;                             :size 13
+   ;;                             :weight normal
+   ;;                             :width normal
+   ;;                             :powerline-scale 1)
+   dotspacemacs-default-font '("Terminus"
+                               :size 12
                                :weight normal
                                :width normal
                                :powerline-scale 1)
@@ -193,7 +195,7 @@ values."
    ;; List of search tool executable names. Spacemacs uses the first installed
    ;; tool of the list. Supported tools are `ag', `pt', `ack' and `grep'.
    ;; (default '("ag" "pt" "ack" "grep"))
-   dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
+   dotspacemacs-search-tools '("rg" "ag" "pt" "ack" "grep")
    ;; The default package repository used if no explicit repository has been
    ;; specified with an installed package.
    ;; Not used for now. (default nil)
@@ -211,21 +213,8 @@ user code."
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
   (setq powerline-default-separator 'nil)
-  (spaceline-compile)
-
   (setq gofmt-command "goimports")
-
-  (setq-default git-magit-status-fullscreen t)
-
-  '(version-control :variables
-                    version-control-diff-tool 'diff-hl)
-  '(version-control :variables
-                    version-control-global-margin t)
-
-  ;; (setq python-shell-interpreter "python")
-  (setq anaconda-mode-server-script "/usr/local/lib/python2.7/site-packages/anaconda_mode.py")
-
-  (setq-default rust-enable-racer t)
+  (spaceline-toggle-minor-modes)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
