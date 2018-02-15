@@ -8,3 +8,5 @@ export NPMBIN=$HOME/.npm-global/bin:./node_modules/.bin
 export CARGOBIN=$HOME/.cargo/bin
 
 export PATH=$PATH:$LOCALBIN:$GOBIN:$NPMBIN:$CARGOBIN
+
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
