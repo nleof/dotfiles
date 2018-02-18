@@ -159,18 +159,23 @@ values."
                          zenburn)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
+
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   ;; dotspacemacs-default-font '("Bitstream Vera Sans Mono"
-   ;;                             :size 13
-   ;;                             :weight normal
-   ;;                             :width normal
-   ;;                             :powerline-scale 1)
-   dotspacemacs-default-font '("Terminus"
-                               :size 12
-                               :weight normal
-                               :width normal
-                               :powerline-scale 1)
+   dotspacemacs-default-font
+   (cond
+    ((spacemacs/system-is-mac)
+     '("Monaco"
+       :size 13
+       :weight normal
+       :width normal
+       :powerline-scale 1))
+    (t '("Terminus"
+         :size 12
+         :weight normal
+         :width normal
+         :powerline-scale 1)))
+
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands (M-x) (after pressing on the leader key).
