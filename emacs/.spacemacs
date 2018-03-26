@@ -43,7 +43,8 @@ values."
      better-defaults
      osx
      emacs-lisp
-     git
+     (git :variables
+          git-magit-status-fullscreen t)
      version-control
 
      spell-checking
