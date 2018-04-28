@@ -7,7 +7,6 @@ COMPLETION_WAITING_DOTS="true"
 
 plugins=(
     history-substring-search
-    kubectl
 )
 
 setopt HIST_IGNORE_ALL_DUPS
