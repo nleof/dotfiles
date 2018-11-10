@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     graphviz
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -43,8 +44,7 @@ values."
      better-defaults
      osx
      emacs-lisp
-     (git :variables
-          git-magit-status-fullscreen t)
+     git
      version-control
 
      spell-checking
