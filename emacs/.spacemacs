@@ -151,7 +151,8 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(monokai
+   dotspacemacs-themes '(dichromacy
+                         monokai
                          spacemacs-dark
                          solarized-dark
                          solarized-light
@@ -164,18 +165,11 @@ values."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font
-   (cond
-    ((spacemacs/system-is-mac)
-     '("Monaco"
+     '("Bitstream Vera Sans Mono"
        :size 13
        :weight normal
        :width normal
-       :powerline-scale 1))
-    (t '("Terminus"
-         :size 12
-         :weight normal
-         :width normal
-         :powerline-scale 1)))
+       :powerline-scale 1)
 
    ;; The leader key
    dotspacemacs-leader-key "SPC"
