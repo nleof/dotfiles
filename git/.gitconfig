@@ -52,3 +52,6 @@
 
 [url "ssh://git@github.com/ulule"]
 	insteadOf = https://github.com/ulule
+
+[url "ssh://git@github.com/nleof"]
+	insteadOf = https://github.com/nleof
