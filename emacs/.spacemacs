@@ -33,7 +33,7 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
+   '(typescript
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
@@ -47,6 +47,7 @@ This function should only modify configuration layer settings."
      emacs-lisp
      git
      version-control
+     lsp
 
      spell-checking
      syntax-checking
@@ -69,11 +70,11 @@ This function should only modify configuration layer settings."
      haskell
      javascript
 
-     ;; if autocomplete is broken
-     ;; cd $GOPATH && find . -name "*.a" -exec rm {} +
-     ;; gocode set autobuild true
      (go :variables
+         go-backend 'lsp
          go-tab-width 4
+         go-format-before-save t
+         go-use-golangci-lint t
          gofmt-command "goimports")
 
      (rust :variables
@@ -487,6 +488,10 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+    (add-hook 'go-mode-hook
+              (lambda ()
+                (setq indent-tabs-mode 1))
+    )
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
