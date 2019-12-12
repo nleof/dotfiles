@@ -14,3 +14,5 @@ setopt HIST_IGNORE_ALL_DUPS
 source $ZSH/oh-my-zsh.sh
 
 REPORTTIME=5
+
+alias vi="vim"
