@@ -1,12 +1,7 @@
-export LOCALBIN=$HOME/.local/bin:$HOME/bin
-export GOPATH=$HOME/dev/go
-export GOBIN=$GOPATH/bin:/usr/local/go/bin
-export GOSRC=$GOPATH/src
+export LOCALBIN="$HOME/.local/bin:$HOME/bin"
 
-export NPMBIN=$HOME/.npm-global/bin:./node_modules/.bin
+export PATH=$PATH:$LOCALBIN
 
-export CARGOBIN=$HOME/.cargo/bin
+export SSH_AUTH_SOCK="/run/user/${UID}/ssh-agent.socket"
 
-export PATH=$PATH:$LOCALBIN:$GOBIN:$NPMBIN:$CARGOBIN
-
-export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+source $HOME/.zshenv_private
