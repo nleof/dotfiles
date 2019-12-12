@@ -150,7 +150,7 @@ bindsym $mod+r mode "resize"
 bar {
         # font -misc-fixed-medium-r-normal--11-120-75-75-C-70-iso10646-1
         # status_command i3status
-        status_command ~/.i3/conky.sh
+        status_command ~/.config/i3/conky.sh
         tray_output none
 }
 
