@@ -1,7 +1,7 @@
 [user]
-	name = Alexandre Leroux
-	email = alexandre@yawp.fr
-	signingkey = BB0240EFF1082BCA
+name = Alexandre Leroux
+email = alexandre@yawp.fr
+signingkey = 1E916FDC4692C50D
 
 [branch]
 	autosetupmerge = true
