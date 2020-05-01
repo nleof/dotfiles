@@ -9,6 +9,7 @@ set $right l
 set $term urxvt
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 set $lock swaylock -k -l -c 333333
+set $lockd swaylock -f -k -l -c 333333
 
 set $ws1 1: zsh
 set $ws2 2: zsh
@@ -17,10 +18,10 @@ set $ws4 4: web
 set $ws5 5: mpd
 
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
+         timeout 300 "$lockd" \
          timeout 600 'swaymsg "output * dpms off"' \
               resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -c 000000'
+         before-sleep "$lockd"
 
 ### Key bindings
 #
