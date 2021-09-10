@@ -15,5 +15,6 @@ source $ZSH/oh-my-zsh.sh
 
 REPORTTIME=5
 
-alias vi="vim"
+alias vi="nvim"
+alias vim="nvim"
 alias ydl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"
