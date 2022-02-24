@@ -6,15 +6,16 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $term urxvt
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $term alacritty
+# set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu wofi --show=drun --lines=5 --prompt=""
 set $lock swaylock -k -l -c 333333
 set $lockd swaylock -f -k -l -c 333333
 
 set $ws1 1: zsh
 set $ws2 2: zsh
 set $ws3 3: dev
-set $ws4 4: web
+set $ws4 4: www
 set $ws5 5: mpd
 
 exec swayidle -w \
@@ -161,17 +162,7 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%d/%m %H:%M %p'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #323232 #323232 #ffffff
-    }
+    swaybar_command waybar
 }
 
 set $mode_system System: (l) lock, (e) logout, (s) suspend, (r) reboot, (S) shutdown
