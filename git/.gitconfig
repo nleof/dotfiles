@@ -1,7 +1,6 @@
 [user]
 name = Alexandre Leroux
 email = alexandre@yawp.fr
-signingkey = 1E916FDC4692C50D
 
 [branch]
 autosetupmerge = true
@@ -9,9 +8,6 @@ autosetuprebase = always
 
 [core]
 editor = vi
-
-[commit]
-gpgsign = true
 
 [alias]
 st = status
