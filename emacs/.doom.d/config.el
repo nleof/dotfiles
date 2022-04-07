@@ -56,3 +56,9 @@
 ;; they are implemented.
 
 (setq lsp-ui-doc-enable nil)
+
+(after! go-mode
+  (setq gofmt-command "goimports")
+  (add-hook 'go-mode-hook
+            (lambda ()
+              (add-hook 'after-save-hook 'gofmt nil 'make-it-local))))
