@@ -1,0 +1,4 @@
+[character]
+success_symbol = "[λ](green)"
+error_symbol = "[λ](red)"
+vicmd_symbol = "[λ](green)"
