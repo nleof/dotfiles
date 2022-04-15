@@ -72,7 +72,8 @@ require('plugins')
 
 require('lualine').setup {
   options = {
-    theme = 'ayu_light',
+    theme = 'ayu_dark',
+    -- theme = 'ayu_light',
     section_separators = '', -- Disable cute separators
     component_separators = '',
   },
@@ -92,7 +93,8 @@ lsp.gopls.setup {on_attach=require'completion'.on_attach}
 
 require('gitsigns').setup()
 
-vim.g.ayucolor = "light"
+-- vim.g.ayucolor = "light"
+vim.g.ayucolor = "dark"
 vim.cmd[[
 colorscheme ayu
 ]]
