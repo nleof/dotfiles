@@ -9,13 +9,13 @@
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": [],
     // "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
-    "modules-right": ["pulseaudio", "cpu", "memory", "battery", "battery#bat2", "clock"],
+    "modules-right": ["cpu", "memory", "pulseaudio", "clock"],
     // Modules configuration
     "sway/workspaces": {
         "disable-scroll": false,
         "all-outputs": true,
         // "format": "{name}: {icon}",
-        "format": "{icon} {name}",
+        "format": "{icon}{name}",
         "format-icons": {
             "1: zsh": "",
             "2: zsh": "",
@@ -129,7 +129,7 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
+        "scroll-step": 10, // %, can be a float
         // "format": "{volume}% {icon} {format_source}",
         "format": "{icon} {volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",

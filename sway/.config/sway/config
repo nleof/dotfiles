@@ -185,11 +185,10 @@ font pango:JetBrains Mono 9
 exec firefox
 exec emacs
 exec $term
-exec $term
-exec cantata
 
-assign [class="^Emacs$"] $ws3
-assign [class="^firefox$"] $ws4
-assign [app_id="^cantata$"] $ws5
+assign [app_id="emacs"] $ws3
+assign [app_id="firefox"] $ws4
+
+output HDMI-A-1 scale 2
 
 include /etc/sway/config.d/*

@@ -1,7 +1,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-family: Jetbrains Mono, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 11px;
 }
 
 window#waybar {
@@ -79,7 +79,6 @@ window#waybar.chromium {
 #mode,
 #idle_inhibitor,
 #mpd {
-    padding: 0 10px;
     padding: 0 5px;
     color: #ffffff;
 }
