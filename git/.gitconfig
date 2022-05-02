@@ -21,8 +21,11 @@ lol = log --graph --decorate --pretty=oneline --abbrev-commit
 lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 ls = ls-files
 
-[url "ssh://git@github.com/ulule"]
-insteadOf = https://github.com/ulule
+[url "ssh://git@github.com"]
+insteadOf = https://github.com
 
-[url "ssh://git@github.com/nleof"]
-insteadOf = https://github.com/nleof
+[url "ssh://git@gitlab.infra.online.net"]
+insteadOf = https://gitlab.infra.online.net
+
+[includeIf "gitdir:~/dev/scaleway/"]
+path = .gitconfig-scaleway
