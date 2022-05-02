@@ -182,12 +182,16 @@ bindsym $mod+Shift+e mode "$mode_system"
 default_border pixel 1
 font pango:JetBrains Mono 9
 
-exec firefox
+exec google-chrome
 exec emacs
 exec $term
+exec alacritty --class ncmpcpp --command ncmpcpp
+exec nm-applet --indicator
 
 assign [app_id="emacs"] $ws3
 assign [app_id="firefox"] $ws4
+assign [app_id="google-chrome"] $ws4
+assign [app_id="ncmpcpp"] $ws5
 
 output HDMI-A-1 scale 2
 

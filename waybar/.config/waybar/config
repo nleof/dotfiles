@@ -9,13 +9,13 @@
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": [],
     // "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
-    "modules-right": ["cpu", "memory", "pulseaudio", "clock"],
+    "modules-right": ["mpd", "cpu", "memory", "pulseaudio", "clock", "tray"],
     // Modules configuration
     "sway/workspaces": {
         "disable-scroll": false,
         "all-outputs": true,
         // "format": "{name}: {icon}",
-        "format": "{icon}{name}",
+        "format": "{icon} {name}",
         "format-icons": {
             "1: zsh": "",
             "2: zsh": "",
@@ -41,16 +41,16 @@
         "format": "<span style=\"italic\">{}</span>"
     },
     "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        // "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title}",
+        "format-disconnected": "Disconnected",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped",
         "unknown-tag": "N/A",
         "interval": 2,
         "consume-icons": {
             "on": " "
         },
         "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
             "on": " "
         },
         "repeat-icons": {
@@ -129,7 +129,7 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        "scroll-step": 10, // %, can be a float
+        "scroll-step": 5, // %, can be a float
         // "format": "{volume}% {icon} {format_source}",
         "format": "{icon} {volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",
