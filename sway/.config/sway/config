@@ -13,10 +13,9 @@ set $lock swaylock -k -l -c 333333
 set $lockd swaylock -f -k -l -c 333333
 
 set $ws1 1: zsh
-set $ws2 2: zsh
-set $ws3 3: dev
-set $ws4 4: www
-set $ws5 5: mpd
+set $ws2 2: dev
+set $ws3 3: www
+set $ws4 4: mpd
 
 exec swayidle -w \
          timeout 300 "$lockd" \
@@ -188,10 +187,10 @@ exec $term
 exec alacritty --class ncmpcpp --command ncmpcpp
 exec nm-applet --indicator
 
-assign [app_id="emacs"] $ws3
-assign [app_id="firefox"] $ws4
-assign [app_id="google-chrome"] $ws4
-assign [app_id="ncmpcpp"] $ws5
+assign [app_id="emacs"] $ws2
+assign [app_id="firefox"] $ws3
+assign [app_id="google-chrome"] $ws3
+assign [app_id="ncmpcpp"] $ws4
 
 output HDMI-A-1 scale 2
 

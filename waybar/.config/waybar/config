@@ -18,10 +18,9 @@
         "format": "{icon} {name}",
         "format-icons": {
             "1: zsh": "",
-            "2: zsh": "",
-            "3: dev": "",
-            "4: www": "",
-            "5: mpd": "",
+            "2: dev": "",
+            "3: www": "",
+            "4: mpd": "",
             "5": "",
             "urgent": "",
             "focused": "",
