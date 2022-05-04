@@ -12,7 +12,7 @@
     "modules-right": ["mpd", "cpu", "memory", "pulseaudio", "clock", "tray"],
     // Modules configuration
     "sway/workspaces": {
-        "disable-scroll": false,
+        "disable-scroll": true,
         "all-outputs": true,
         // "format": "{name}: {icon}",
         "format": "{icon} {name}",
@@ -20,7 +20,7 @@
             "1: zsh": "",
             "2: dev": "",
             "3: www": "",
-            "4: mpd": "",
+            "4: mpc": "",
             "5": "",
             "urgent": "",
             "focused": "",

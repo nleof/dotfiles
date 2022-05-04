@@ -15,7 +15,7 @@ set $lockd swaylock -f -k -l -c 333333
 set $ws1 1: zsh
 set $ws2 2: dev
 set $ws3 3: www
-set $ws4 4: mpd
+set $ws4 4: mpc
 
 exec swayidle -w \
          timeout 300 "$lockd" \
