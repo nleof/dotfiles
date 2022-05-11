@@ -13,7 +13,7 @@
     // Modules configuration
     "sway/workspaces": {
         "disable-scroll": true,
-        "all-outputs": true,
+        "all-outputs": false,
         // "format": "{name}: {icon}",
         "format": "{icon} {name}",
         "format-icons": {
@@ -21,7 +21,7 @@
             "2: dev": "",
             "3: www": "",
             "4: mpc": "",
-            "5": "",
+            "5: ytb": "",
             "urgent": "",
             "focused": "",
             "default": ""
@@ -42,8 +42,8 @@
     "mpd": {
         // "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title}",
-        "format-disconnected": "Disconnected",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped",
+        "format-disconnected": "",
+        "format-stopped": "",
         "unknown-tag": "N/A",
         "interval": 2,
         "consume-icons": {
@@ -77,9 +77,10 @@
         "spacing": 10
     },
     "clock": {
+        "format": "{:%H:%M %d/%m}",
         // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+        // "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
         "format": " {usage}%",
