@@ -3,7 +3,6 @@ if status is-interactive
 end
 
 alias l="ls -alh"
-alias cat="bat --theme='Solarized (light)'"
 alias vi="nvim"
 alias vim="nvim"
 alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1])"'
@@ -11,5 +10,6 @@ alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.ar
 
 set fish_greeting
 
+set -x DIRENV_LOG_FORMAT ""
 direnv hook fish | source
 starship init fish | source
