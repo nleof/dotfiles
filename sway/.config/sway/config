@@ -6,21 +6,21 @@ set $left h
 set $down j
 set $up k
 set $right l
-# set $term alacritty
-set $term foot
+set $term alacritty -e fish
+# set $term foot
 # set $menu dmenu_path | dmenu | xargs swaymsg exec --
 set $menu wofi --show=drun --lines=5 --prompt=""
-set $lock swaylock -k -l -c 003366
-set $lockd swaylock -f -k -l -c 003366
+set $lock swaylock -k -l -c 222222
+set $lockd swaylock -f -k -l -c 222222
 
 set $ws1 1: zsh
 set $ws2 2: dev
 set $ws3 3: www
-set $ws4 4: mpc
-set $ws5 5: ytb
+set $ws4 4: pop
+set $ws5 5: kdb
 
-set $output1 HDMI-A-1
-set $output2 DP-1
+set $output1 DP-3
+set $output2 HDMI-A-1
 
 # exec swayidle -w \
 #          timeout 300 "$lockd" \
@@ -184,24 +184,28 @@ mode "$mode_system" {
 bindsym $mod+Shift+e mode "$mode_system"
 
 default_border pixel 1
-font pango:JetBrains Mono 9
+# font pango:JetBrains Mono 9
+font pango:Iosevka 9
 
-exec google-chrome
+exec firefox
+exec MOZ_ENABLE_WAYLAND=1 thunderbird
 exec emacs
 exec $term
-exec alacritty --class ncmpcpp --command ncmpcpp
 exec nm-applet --indicator
 exec mako
+exec keepassxc
 
 assign [app_id="emacs"] $ws2
 assign [app_id="firefox"] $ws3
 assign [app_id="google-chrome"] $ws3
-assign [app_id="ncmpcpp"] $ws4
+assign [app_id="thunderbird"] $ws4
+assign [app_id="keepassxc"] $ws5
 
 output $output1 scale 2 pos 0 100
 output $output2 transform 270 res 1920x1200 pos 1920 0
+output $output2 disable
 
-workspace $ws5 output $output2
+# workspace $ws5 output $output2
 
 bindsym $mod+Ctrl+3 exec grim
 bindsym $mod+Ctrl+4 exec grim -g "$(slurp)"
