@@ -28,7 +28,8 @@
 ;; `load-theme' function. This is the default:
 ;; (setq doom-theme 'dichromacy)
 ;; (setq doom-theme 'doom-tomorrow-night)
-(setq doom-theme 'doom-solarized-light)
+(setq doom-theme 'doom-tomorrow-day)
+;; (setq doom-theme 'doom-solarized-light)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -63,3 +64,16 @@
   (add-hook 'go-mode-hook
             (lambda ()
               (add-hook 'after-save-hook 'gofmt nil 'make-it-local))))
+
+(use-package! lsp-rust
+  :config
+  (setq! lsp-rust-analyzer-cargo-watch-enable t
+         lsp-rust-analyzer-cargo-watch-command "clippy"
+         lsp-rust-analyzer-proc-macro-enable t
+         lsp-rust-analyzer-cargo-load-out-dirs-from-check t
+         lsp-rust-analyzer-inlay-hints-mode t
+         lsp-rust-analyzer-server-display-inlay-hints t
+         lsp-rust-analyzer-display-chaining-hints t
+         lsp-rust-analyzer-display-parameter-hints t))
+
+(global-visual-line-mode nil)
