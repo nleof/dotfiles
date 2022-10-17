@@ -1,6 +1,6 @@
 [user]
 name = Alexandre Leroux
-email = 8794280+nleof@users.noreply.github.com
+email = alexandre@yawp.fr
 
 [branch]
 autosetupmerge = true
@@ -27,5 +27,8 @@ insteadOf = https://github.com/nleof
 [url "ssh://git@gitlab.infra.online.net"]
 insteadOf = https://gitlab.infra.online.net
 
-[includeIf "gitdir:~/dev/scaleway/"]
+[includeIf "gitdir:~/dev/scw/"]
 path = .gitconfig-scaleway
+
+[includeIf "gitdir:~/dev/github/"]
+path = .gitconfig-github
