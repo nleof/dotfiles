@@ -28,8 +28,8 @@
 ;; `load-theme' function. This is the default:
 ;; (setq doom-theme 'dichromacy)
 ;; (setq doom-theme 'doom-tomorrow-night)
-(setq doom-theme 'doom-tomorrow-day)
-;; (setq doom-theme 'doom-solarized-light)
+;; (setq doom-theme 'doom-tomorrow-day)
+(setq doom-theme 'doom-solarized-light)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!

@@ -124,4 +124,4 @@ schemes:
       cyan:    '0x54ced6'
       white:   '0x282a2e'
 
-colors: *tomorrow_light
+colors: *solarized_light

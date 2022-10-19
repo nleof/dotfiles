@@ -1,0 +1,38 @@
+/* base16-wofi (https://sr.ht/~knezi/base16-wofi)
+ * Base16 wofi template by knezi
+ * Solarized Light scheme by Ethan Schoonover (modified by aramisgithub) */
+
+window {
+	background-color: #fdf6e3;
+	color: #586e75;
+}
+
+#entry:nth-child(odd) {
+	background-color: #fdf6e3;
+}
+
+#entry:nth-child(even) {
+	background-color: #eee8d5;
+}
+
+#entry:selected {
+	background-color: #93a1a1;
+}
+
+#input {
+	background-color: #fdf6e3;
+	color: #657b83;
+	border: none;
+}
+
+// edited to remove blue border when input focused
+// added gray border around whole box for more visibility
+
+#input:focus {
+	box-shadow: none;
+}
+
+#outer-box {
+	border: 1px solid #93a1a1;
+}
+

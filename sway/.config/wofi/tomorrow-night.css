@@ -1,0 +1,64 @@
+/* base16-wofi (https://sr.ht/~knezi/base16-wofi)
+ * Base16 wofi template by knezi
+ * Tomorrow Night scheme by Chris Kempson (http://chriskempson.com) */
+
+/*
+window {
+	background-color: #1d1f21;
+	color: #c5c8c6;
+}
+
+#entry:nth-child(odd) {
+	background-color: #1d1f21;
+}
+
+#entry:nth-child(even) {
+	background-color: #282a2e;
+}
+
+#entry:selected {
+	background-color: #373b41;
+}
+
+#input {
+	background-color: #282a2e;
+	color: #b4b7b4;
+	border-color: #373b41; 
+}
+
+#input:focus {
+	border-color: #f0c674; 
+}
+*/
+
+/* base16-wofi (https://sr.ht/~knezi/base16-wofi)
+ * Base16 wofi template by knezi
+ * Solarized Light scheme by Ethan Schoonover (modified by aramisgithub) */
+
+window {
+	background-color: #fdf6e3;
+	color: #586e75;
+	border-color: #93a1a1;
+}
+
+#entry:nth-child(odd) {
+	background-color: #fdf6e3;
+}
+
+#entry:nth-child(even) {
+	background-color: #eee8d5;
+}
+
+#entry:selected {
+	background-color: #93a1a1;
+}
+
+#input {
+	background-color: #eee8d5;
+	color: #657b83;
+	border-color: #93a1a1;
+}
+
+#input:focus {
+	border-color: #b58900; 
+}
