@@ -32,3 +32,6 @@ path = .gitconfig-scaleway
 
 [includeIf "gitdir:~/dev/github/"]
 path = .gitconfig-github
+
+[includeIf "gitdir:~/dev/360/"]
+path = .gitconfig-360
