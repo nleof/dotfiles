@@ -9,7 +9,7 @@ set $right l
 set $term alacritty -e fish
 # set $term foot
 # set $menu dmenu_path | dmenu | xargs swaymsg exec --
-set $menu wofi --show=drun --lines=5 --prompt=""
+set $menu wofi --show=drun --lines=10 --prompt=""
 set $lock swaylock -k -l -c 222222
 set $lockd swaylock -f -k -l -c 222222
 
