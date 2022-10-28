@@ -186,8 +186,7 @@ mode "$mode_system" {
 bindsym $mod+Shift+e mode "$mode_system"
 
 default_border pixel 1
-# font pango:JetBrains Mono 9
-font pango:Iosevka 9
+font pango:JetBrains Mono 9
 
 exec firefox
 exec MOZ_ENABLE_WAYLAND=1 thunderbird

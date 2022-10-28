@@ -76,16 +76,20 @@ window#waybar.hidden {
     margin-right: 0;
 }
 
-#battery.charging, #battery.plugged {
-    color: #ffffff;
-    background-color: #26A65B;
-}
-
 @keyframes blink {
     to {
         background-color: #ffffff;
         color: #000000;
     }
+}
+
+#battery.full {
+	color: green;
+}
+
+#battery.charging, #battery.plugged {
+    color: #ffffff;
+    background-color: #26A65B;
 }
 
 #battery.critical:not(.charging) {
@@ -102,8 +106,8 @@ label:focus {
     background-color: #000000;
 }
 
-#network.disconnected {
-    background-color: #f53c3c;
+#network.disconnected, #network.disabled, #network.linked {
+    color: red;
 }
 
 #pulseaudio.muted {
