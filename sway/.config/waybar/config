@@ -9,7 +9,7 @@
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": [],
     // "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
-    "modules-right": ["mpd", "idle_inhibitor", "cpu", "memory", "pulseaudio", "clock", "tray"],
+    "modules-right": ["network", "battery", "temperature", "cpu", "memory", "pulseaudio", "clock", "tray"],
     // Modules configuration
     "sway/workspaces": {
         "disable-scroll": true,
@@ -84,19 +84,21 @@
         // "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": " {usage}%",
+    	"interval": 3,
+        "format": " {usage:>2}%  {avg_frequency:>4}Ghz",
         "tooltip": false
     },
     "memory": {
         "format": " {}%"
     },
     "temperature": {
-        // "thermal-zone": 2,
+        "thermal-zone": 6,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        // "format-critical": "{temperatureC:>2}°C {icon}",
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""],
+        "tooltip": false
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -109,26 +111,30 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}%",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
+	"format-time": "{H}h{M}",
+        "format": "{icon} {capacity}% ({time})",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        // "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-full": "{icon} {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": false
     },
     "battery#bat2": {
         "bat": "BAT2"
     },
     "network": {
+    	"interval": 3,
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": " {essid} ({signalStrength}%)",
         // "format-ethernet": " {ipaddr}/{cidr}",
-        "format-ethernet": " {ifname}",
-        "tooltip-format": "{ipaddr}/{cidr} via {gwaddr}",
-        "format-linked": " {ifname} (No IP)",
-        "format-disconnected": "⚠ down",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-ethernet": " {bandwidthDownBits:>8}  {bandwidthUpBits:>8}",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr} via {gwaddr}",
+        "format-linked": " down",
+        "format-disconnected": " down",
+        "format-disabled": " down"
+        // "format-alt": " {ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
         "scroll-step": 5, // %, can be a float
