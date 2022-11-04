@@ -9,7 +9,7 @@
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": [],
     // "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
-    "modules-right": ["network", "battery", "temperature", "cpu", "memory", "pulseaudio", "clock", "tray"],
+    "modules-right": ["network", "battery", "cpu", "memory", "pulseaudio", "clock", "tray"],
     // Modules configuration
     "sway/workspaces": {
         "disable-scroll": true,
@@ -84,12 +84,23 @@
         // "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-    	"interval": 3,
-        "format": " {usage:>2}%  {avg_frequency:>4}Ghz",
+        "states": {
+            "good": 0,
+            "warning": 70,
+            "critical": 95
+        },
+        "interval": 3,
+        "format": " {usage:>2}%",
         "tooltip": false
     },
     "memory": {
-        "format": " {}%"
+        "states": {
+            "good": 0,
+            "ok": 30,
+            "warning": 60,
+            "critical": 85
+        },
+        "format": " {percentage:>2}%"
     },
     "temperature": {
         "thermal-zone": 6,
@@ -107,17 +118,17 @@
     },
     "battery": {
         "states": {
-            // "good": 95,
-            "warning": 30,
+            "good": 100,
+            "warning": 50,
             "critical": 15
         },
-	"format-time": "{H}h{M}",
+        "format-time": "{H}h{M}",
         "format": "{icon} {capacity}% ({time})",
+        "format-full": "{icon} {capacity}%",
+        "format-good": "{icon} {capacity}%",
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         // "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        "format-full": "{icon} {capacity}%",
         "format-icons": ["", "", "", "", ""],
         "tooltip": false
     },
@@ -125,7 +136,7 @@
         "bat": "BAT2"
     },
     "network": {
-    	"interval": 3,
+        "interval": 3,
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": " {essid} ({signalStrength}%)",
         // "format-ethernet": " {ipaddr}/{cidr}",

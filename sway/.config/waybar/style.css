@@ -83,8 +83,12 @@ window#waybar.hidden {
     }
 }
 
-#battery.full {
-	color: green;
+#battery.full, #battery.good {
+    color: green;
+}
+
+#battery.warning {
+    color: orange;
 }
 
 #battery.charging, #battery.plugged {
@@ -100,6 +104,26 @@ window#waybar.hidden {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+#memory.good {
+    color: green;
+}
+
+#memory.warning {
+    color: orange;
+}
+
+#memory.critical {
+    color: red;
+}
+
+#cpu.warning {
+    color: orange;
+}
+
+#cpu.critical {
+    color: red;
 }
 
 label:focus {
