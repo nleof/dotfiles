@@ -194,12 +194,14 @@ font pango:JetBrains Mono 9
 exec firefox
 exec MOZ_ENABLE_WAYLAND=1 thunderbird
 exec emacs
+exec zeal
 exec $term
 exec nm-applet --indicator
 exec mako
 exec QT_QPA_PLATFORM=wayland keepassxc
 
 assign [app_id="emacs"] $ws2
+assign [app_id="org.zealdocs.zeal"] $ws2
 assign [app_id="firefox"] $ws3
 assign [app_id="google-chrome"] $ws3
 assign [app_id="thunderbird"] $ws4
