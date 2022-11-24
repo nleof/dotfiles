@@ -189,7 +189,7 @@ bindsym --locked XF86MonBrightnessUp exec light -T 1.4
 bindsym --locked XF86MonBrightnessDown exec light -T 0.72
 
 default_border pixel 1
-font pango:JetBrains Mono 9
+font pango:Iosevka SS14 Regular, 9
 
 exec firefox
 exec MOZ_ENABLE_WAYLAND=1 thunderbird

@@ -1,7 +1,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Jetbrains Mono, Iosevka, Roboto, "Font Awesome 5 Free";
-    font-size: 11px;
+    font-family: "Iosevka SS14", Roboto, "Font Awesome 5 Free";
+    font-size: 12px;
 }
 
 window#waybar {
