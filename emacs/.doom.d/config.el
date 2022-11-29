@@ -58,7 +58,11 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-;; (setq lsp-ui-doc-enable nil)
+;; (after! lsp-ui
+;;   (setq lsp-ui-doc-enable t)
+;;   (setq lsp-ui-doc-show-with-cursor nil)
+;;   (setq lsp-ui-doc-show-with-mouse t)
+;;   )
 
 (after! go-mode
   (setq gofmt-command "goimports")
@@ -76,5 +80,3 @@
          lsp-rust-analyzer-server-display-inlay-hints t
          lsp-rust-analyzer-display-chaining-hints t
          lsp-rust-analyzer-display-parameter-hints t))
-
-(global-visual-line-mode nil)
