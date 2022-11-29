@@ -3,7 +3,10 @@ add_newline = false
 [character]
 success_symbol = "[λ](bold green)"
 error_symbol = "[λ](bold red)"
-vicmd_symbol = "[λ](bold green)"
+vimcmd_symbol = "[-](bold blue)"
+vimcmd_replace_one_symbol = "[r](bold purple)"
+vimcmd_replace_symbol = "[r](bold purple)"
+vimcmd_visual_symbol = "[v](bold yellow)"
 
 [git_commit]
 tag_symbol = " tag "
@@ -18,6 +21,12 @@ deleted = "x"
 [aws]
 symbol = "aws "
 
+[bun]
+symbol = "bun "
+
+[c]
+symbol = "C "
+
 [cobol]
 symbol = "cobol "
 
@@ -29,6 +38,9 @@ symbol = "cr "
 
 [cmake]
 symbol = "cmake "
+
+[daml]
+symbol = "daml "
 
 [dart]
 symbol = "dart "
@@ -78,6 +90,9 @@ symbol = "nodejs "
 [memory_usage]
 symbol = "memory "
 
+[meson]
+symbol = "meson "
+
 [nim]
 symbol = "nim "
 
@@ -105,6 +120,9 @@ symbol = "purs "
 [python]
 symbol = "py "
 
+[raku]
+symbol = "raku "
+
 [ruby]
 symbol = "rb "
 
@@ -113,6 +131,9 @@ symbol = "rs "
 
 [scala]
 symbol = "scala "
+
+[spack]
+symbol = "spack "
 
 [sudo]
 symbol = "sudo "
