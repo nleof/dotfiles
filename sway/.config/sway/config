@@ -16,8 +16,7 @@ set $lockd swaylock -f -k -l -c 222222
 set $ws1 1: zsh
 set $ws2 2: dev
 set $ws3 3: www
-set $ws4 4: pop
-set $ws5 5: kdb
+set $ws4 4: kdb
 
 set $output1 DP-3
 set $output2 HDMI-A-1
@@ -205,8 +204,8 @@ assign [app_id="emacs"] $ws2
 assign [app_id="org.zealdocs.zeal"] $ws2
 assign [app_id="firefox"] $ws3
 assign [app_id="google-chrome"] $ws3
-assign [app_id="thunderbird"] $ws4
-assign [app_id="org.keepassxc.KeePassXC"] $ws5
+# assign [app_id="thunderbird"] $ws4
+assign [app_id="org.keepassxc.KeePassXC"] $ws4
 
 output $output1 scale 2 pos 0 100
 output $output2 transform 270 res 1920x1200 pos 1920 0
