@@ -24,11 +24,8 @@ ls = ls-files
 [url "ssh://git@github.com/nleof"]
 insteadOf = https://github.com/nleof
 
-[url "ssh://git@gitlab.infra.online.net"]
-insteadOf = https://gitlab.infra.online.net
-
-[includeIf "gitdir:~/dev/scw/"]
-path = .gitconfig-scaleway
+[url "ssh://git@github.com/360Learning"]
+insteadOf = https://github.com/360Learning
 
 [includeIf "gitdir:~/dev/github/"]
 path = .gitconfig-github
