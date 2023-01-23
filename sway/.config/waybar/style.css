@@ -83,17 +83,13 @@ window#waybar.hidden {
     }
 }
 
-#battery.full, #battery.good {
+#battery.full, #battery.good,
+#battery.charging, #battery.plugged {
     color: green;
 }
 
 #battery.warning {
     color: orange;
-}
-
-#battery.charging, #battery.plugged {
-    color: #ffffff;
-    background-color: #26A65B;
 }
 
 #battery.critical:not(.charging) {
