@@ -50,12 +50,6 @@ api.nvim_set_keymap('i', '<C-e>', '<Esc>A', { noremap = true, silent = true })
 -- Yank rest of the line
 api.nvim_set_keymap('', 'Y', 'y$', {})
 
--- Telescope
--- {previewer = false}
-vim.api.nvim_set_keymap('n', '<Leader>ff', [[<Cmd>lua require('telescope.builtin').find_files()<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>fg', [[<Cmd>lua require('telescope.builtin').live_grep()<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>fb', [[<Cmd>lua require('telescope.builtin').buffers()<CR>]], { noremap = true, silent = true })
-
 --
 -- Languages options
 --
@@ -63,38 +57,3 @@ vim.api.nvim_set_keymap('n', '<Leader>fb', [[<Cmd>lua require('telescope.builtin
 api.nvim_command([[
 autocmd FileType go setlocal shiftwidth=4 tabstop=4 softtabstop=4 noexpandtab
 ]])
-
---
--- Plugins
---
-
-require('plugins')
-
-require('lualine').setup {
-  options = {
-    theme = 'ayu_dark',
-    -- theme = 'ayu_light',
-    section_separators = '', -- Disable cute separators
-    component_separators = '',
-  },
-  sections = {
-    lualine_x = {'encoding', 'filetype'}, -- Disable icon
-  },
-}
-
-require('nvim-treesitter.configs').setup {
-  ensure_installed = 'maintained',
-  highlight = {enable = true},
-  indent = {enable = true},
-}
-
-local lsp = require 'lspconfig'
-lsp.gopls.setup {on_attach=require'completion'.on_attach}
-
-require('gitsigns').setup()
-
--- vim.g.ayucolor = "light"
-vim.g.ayucolor = "dark"
-vim.cmd[[
-colorscheme ayu
-]]
