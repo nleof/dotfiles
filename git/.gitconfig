@@ -8,6 +8,7 @@ autosetuprebase = always
 
 [core]
 editor = vi
+pager = delta
 
 [alias]
 st = status
@@ -20,6 +21,21 @@ lg = log -p
 lol = log --graph --decorate --pretty=oneline --abbrev-commit
 lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 ls = ls-files
+
+[interactive]
+diffFilter = delta --color-only
+
+[delta]
+navigate = true
+light = true
+side-by-side = true
+hunk-header-style = omit
+
+[merge]
+conflictstyle = diff3
+
+[diff]
+colorMoved = default
 
 [url "ssh://git@github.com/nleof"]
 insteadOf = https://github.com/nleof

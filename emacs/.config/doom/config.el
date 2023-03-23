@@ -80,3 +80,7 @@
          lsp-rust-analyzer-server-display-inlay-hints t
          lsp-rust-analyzer-display-chaining-hints t
          lsp-rust-analyzer-display-parameter-hints t))
+
+(use-package magit-delta
+  :ensure t
+  :hook (magit-mode . magit-delta-mode))

@@ -6,3 +6,4 @@
 ;; use 'M-x doom/reload'.
 
 (package! protobuf-mode)
+(package! magit-delta)
