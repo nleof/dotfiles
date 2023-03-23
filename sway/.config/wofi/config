@@ -11,3 +11,5 @@ stylesheet=solarized-light.css
 term=alacritty
 
 insensitive=true
+
+key_expand=Tab
