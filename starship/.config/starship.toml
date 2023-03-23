@@ -1,8 +1,8 @@
 add_newline = false
 
 [character]
-success_symbol = "[λ](bold green)"
-error_symbol = "[λ](bold red)"
+success_symbol = "[>](bold green)"
+error_symbol = "[>](bold red)"
 vimcmd_symbol = "[<](bold blue)"
 vimcmd_replace_one_symbol = "[r](bold purple)"
 vimcmd_replace_symbol = "[r](bold purple)"
