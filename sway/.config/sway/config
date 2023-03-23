@@ -207,9 +207,7 @@ assign [app_id="google-chrome"] $ws3
 # assign [app_id="thunderbird"] $ws4
 assign [app_id="org.keepassxc.KeePassXC"] $ws4
 
-output $output1 scale 2 pos 0 100
-output $output2 transform 270 res 1920x1200 pos 1920 0
-output $output2 disable
+for_window [app_id="firefox" title="Firefox — Sharing Indicator"] floating enable
 
 # workspace $ws5 output $output2
 
