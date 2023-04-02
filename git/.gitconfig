@@ -10,6 +10,9 @@ autosetuprebase = always
 editor = vi
 pager = delta
 
+[pull]
+rebase = true
+
 [alias]
 st = status
 ci = commit
