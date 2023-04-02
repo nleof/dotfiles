@@ -1,0 +1,2 @@
+bindsym --locked XF86MonBrightnessUp exec light -T 1.4
+bindsym --locked XF86MonBrightnessDown exec light -T 0.72
