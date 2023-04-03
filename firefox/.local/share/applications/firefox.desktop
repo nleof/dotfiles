@@ -1,0 +1,20 @@
+[Desktop Entry]
+Version=1.0
+Name=Firefox
+
+GenericName=Web Browser
+Comment=Browse the World Wide Web
+Exec=env MOZ_ENABLE_WAYLAND=1 /usr/lib/firefox/firefox %u
+Icon=firefox
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;application/x-xpinstall;application/pdf;application/json;
+StartupNotify=true
+StartupWMClass=firefox
+Categories=Network;WebBrowser;
+Actions=new-profile-alx-360;
+
+[Desktop Action new-profile-alx-360]
+Name=New Window with alx at 360
+Exec=env MOZ_ENABLE_WAYLAND=1 /usr/lib/firefox/firefox --new-window %u -P alx-360
