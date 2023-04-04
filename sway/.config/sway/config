@@ -186,6 +186,7 @@ bindsym $mod+Shift+e mode "$mode_system"
 
 default_border pixel 1
 font pango:Iosevka SS14, 9
+seat * xcursor_theme breeze_cursors 24
 
 exec firefox
 exec emacs
