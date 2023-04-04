@@ -8,7 +8,7 @@ alias vim="nvim"
 alias vimdiff="nvim -d"
 alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1])"'
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1])"'
-alias cat="bat"
+alias cat="bat -P"
 
 set fish_greeting
 
