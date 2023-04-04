@@ -58,29 +58,6 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-;; (after! lsp-ui
-;;   (setq lsp-ui-doc-enable t)
-;;   (setq lsp-ui-doc-show-with-cursor nil)
-;;   (setq lsp-ui-doc-show-with-mouse t)
-;;   )
-
-(after! go-mode
-  (setq gofmt-command "goimports")
-  (add-hook 'go-mode-hook
-            (lambda ()
-              (add-hook 'after-save-hook 'gofmt nil 'make-it-local))))
-
-(use-package! lsp-rust
-  :config
-  (setq! lsp-rust-analyzer-cargo-watch-enable t
-         lsp-rust-analyzer-cargo-watch-command "clippy"
-         lsp-rust-analyzer-proc-macro-enable t
-         lsp-rust-analyzer-cargo-load-out-dirs-from-check t
-         lsp-rust-analyzer-inlay-hints-mode t
-         lsp-rust-analyzer-server-display-inlay-hints t
-         lsp-rust-analyzer-display-chaining-hints t
-         lsp-rust-analyzer-display-parameter-hints t))
-
 (use-package magit-delta
   :ensure t
   :hook (magit-mode . magit-delta-mode))
