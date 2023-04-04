@@ -61,3 +61,5 @@
 (use-package magit-delta
   :ensure t
   :hook (magit-mode . magit-delta-mode))
+
+(setq spell-dictionary "en_US")
