@@ -1,6 +1,7 @@
 [user]
 name = Alexandre Leroux
 email = alexandre@yawp.fr
+signingkey = /home/nleof/.ssh/id_rsa
 
 [branch]
 autosetupmerge = true
@@ -12,6 +13,12 @@ pager = delta
 
 [pull]
 rebase = true
+
+[commit]
+gpgsign = true
+
+[gpg]
+format = ssh
 
 [alias]
 st = status
