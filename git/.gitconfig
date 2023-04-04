@@ -1,7 +1,5 @@
 [user]
 name = Alexandre Leroux
-email = alexandre@yawp.fr
-signingkey = /home/nleof/.ssh/id_rsa
 
 [branch]
 autosetupmerge = true
