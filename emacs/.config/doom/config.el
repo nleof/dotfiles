@@ -58,9 +58,6 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(use-package magit-delta
-  :ensure t
-  :hook (magit-mode . magit-delta-mode))
 (setq magit-status-buffer-switch-function 'switch-to-buffer)
 
 (setq spell-dictionary "en_US")
