@@ -64,3 +64,6 @@
 (setq magit-status-buffer-switch-function 'switch-to-buffer)
 
 (setq spell-dictionary "en_US")
+
+(after! eglot
+  (set-eglot-client! 'terraform-mode '("terraform-ls" "serve")))
