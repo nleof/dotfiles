@@ -50,8 +50,14 @@ insteadOf = https://github.com/nleof
 [url "ssh://git@github.com/360Learning"]
 insteadOf = https://github.com/360Learning
 
+[url "ssh://git@cgit.lan//srv/git"]
+insteadOf = https://cgit.lan.yawp.fr
+
 [includeIf "gitdir:~/dev/github/"]
 path = .gitconfig-github
 
 [includeIf "gitdir:~/dev/360/"]
 path = .gitconfig-360
+
+[includeIf "gitdir:~/dev/personal/"]
+path = .gitconfig-personal
