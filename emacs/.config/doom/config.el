@@ -64,3 +64,5 @@
 
 (after! eglot
   (set-eglot-client! 'terraform-mode '("terraform-ls" "serve")))
+
+(setq markdown-split-window-direction 'right)
