@@ -188,17 +188,18 @@ default_border pixel 1
 font pango:Iosevka SS14, 9
 seat * xcursor_theme breeze_cursors 24
 
-exec firefox
-exec emacs
-exec zeal
+exec MOZ_ENABLE_WAYLAND=1 firefox -P alx
+exec MOZ_ENABLE_WAYLAND=1 firefox -P alx-360
+exec emacsclient
 exec $term
 exec nm-applet --indicator
 exec mako
+exec 1password
 
 assign [app_id="emacs"] $ws2
 assign [app_id="org.zealdocs.zeal"] $ws2
 assign [app_id="firefox"] $ws3
-assign [app_id="org.keepassxc.KeePassXC"] $ws4
+assign [class="1Password"] $ws4
 
 for_window [app_id="firefox" title="Firefox — Sharing Indicator"] floating enable
 
