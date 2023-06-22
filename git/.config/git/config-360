@@ -1,4 +1,4 @@
 [user]
 name = Alexandre Leroux
 email = alexandre.leroux@360learning.com
-signingkey = /home/nleof/.ssh/360learning
+signingkey = ~/.ssh/360learning

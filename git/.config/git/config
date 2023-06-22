@@ -54,10 +54,10 @@ insteadOf = https://github.com/360Learning
 insteadOf = https://cgit.lan.yawp.fr
 
 [includeIf "gitdir:~/dev/github/"]
-path = .gitconfig-github
+path = config-github
 
 [includeIf "gitdir:~/dev/360/"]
-path = .gitconfig-360
+path = config-360
 
 [includeIf "gitdir:~/dev/personal/"]
-path = .gitconfig-personal
+path = config-personal
