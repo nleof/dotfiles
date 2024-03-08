@@ -1,3 +1,7 @@
+# Archived repository
+
+For up to date configuration, see https://github.com/nleof/nixos-config
+
 # Installation
 
 ```
